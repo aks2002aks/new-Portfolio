@@ -58,6 +58,9 @@ const Backend: React.FC<Props> = ({
             <span className="bg-[#1b1b1b] mr-2 mb-2 p-2 rounded-md text-nowrap opacity-60 border-green-500 border">
               Express.js
             </span>
+            <span className="bg-[#1b1b1b] mr-2 mb-2 p-2 rounded-md text-nowrap opacity-60 border-red-500 border">
+              Java2EE
+            </span>
           </div>
         )}
       </div>

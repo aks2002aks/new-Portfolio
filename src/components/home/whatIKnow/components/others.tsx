@@ -49,6 +49,12 @@ const Others: React.FC<Props> = ({
           <span className="bg-[#1b1b1b] mr-2 mb-2 p-2 rounded-md text-nowrap opacity-60 border-blue-500 border">
             Oops
           </span>
+          <span className="bg-[#1b1b1b] mr-2 mb-2 p-2 rounded-md text-nowrap opacity-60 border-blue-500 border">
+            Material UI
+          </span>
+          <span className="bg-[#1b1b1b] mr-2 mb-2 p-2 rounded-md text-nowrap opacity-60 border-blue-500 border">
+            Tailwind CSS
+          </span>
         </div>}
       </div>
     </div>
