@@ -1,0 +1,17 @@
+[
+  {
+    "company_name": "Highradius",
+    "time": "May 2023 - Nov 2023",
+    "desc": "A complete solution, the AI-enabled FinTech B2B Invoice Management Application uses Flask as the backend framework for providing machine learning models. The application effortlessly incorporates a Flask-powered model to estimate invoice order amounts, revolutionising financial operations for businesses with React.js as the front end, MySQL as the database, and Material UI with Tailwind CSS for UI design."
+  },
+  {
+    "company_name": "Celebal Tech.",
+    "time": "Jun 2023 - Aug 2023",
+    "desc": ""
+  },
+  {
+    "company_name": "Salesforce Inc",
+    "time": "May 2023 - Jul 2023",
+    "desc": "During the 8 weeks of the Virtual Internship, I have completed the following Salesforce Trailhead modules: Salesforce Fundamentals, Organizational Setup, Relationship & Process Automation, Types Of Flows & Security, Apex, Testing & Debugging, VS Code Setup & CLI Setup, Lightning Web Components (LWC) & API, Developer Super Set"
+  }
+]

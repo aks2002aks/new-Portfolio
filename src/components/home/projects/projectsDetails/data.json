@@ -1,0 +1,86 @@
+[
+  {
+    "name": "RESTAURANT WEB APP",
+    "image": "/img1.png",
+    "tech_stack": "Next js, Node js, Express js, MongoDB ,Tailwind css",
+    "website": "https://myrestaurant-olive.vercel.app/",
+    "github": "https://github.com/aks2002aks/myrestaurant"
+  },
+  {
+    "name": "PYG-FORM — A CLONE OF GOOGLE FORMS",
+    "image": "/img2.png",
+    "tech_stack": "Next js, Node js, Express js, MongoDB,Tailwind css",
+    "website": "https://pyg-form.vercel.app/",
+    "github": ""
+  },
+  {
+    "name": "PLAN YOUR GATHERING",
+    "image": "/img3.png",
+    "tech_stack": "Next js, Node js, Express js, MongoDB,Tailwind css",
+    "website": "https://planyourgathering.vercel.app/",
+    "github": ""
+  },
+  {
+    "name": "TRAIN SCHEDULE CHECKING WEB APP",
+    "image": "/img4.png",
+    "tech_stack": "React js, Node js, Express js,Tailwind css",
+    "website": "",
+    "github": "https://github.com/aks2002aks/20051237"
+  },
+  {
+    "name": "AI Enabled Fintech Invoice Prediction",
+    "image": "/img12.png",
+    "tech_stack": "React js, Java2EE, My Sql,Tailwind css ,Material UI",
+    "website": "",
+    "github": "https://github.com/aks2002aks/AI_enabled_fintech_invoice_prediction"
+  },
+  {
+    "name": "QUIZ FORM IN WEB (Backend)",
+    "image": "/img5.png",
+    "tech_stack": " Node js, Express js, MongoDB",
+    "website": "",
+    "github": "https://github.com/aks2002aks/MiniProjectQuizCarrerCarve"
+  },
+  {
+    "name": "FACE DETECTION AND RECOGNITION WITH MOOD DETECTION",
+    "image": "/img6.jpg",
+    "tech_stack": "KNN Algorithm, Python, OpenCV , CNN Algorithm",
+    "website": "",
+    "github": "https://github.com/aks2002aks/face-detection-face-emotion-using-ml"
+  },
+  {
+    "name": "KWEET - A CLONE OF TWITTER",
+    "image": "/img7.png",
+    "tech_stack": "Next js, firebase , google api , tailwind css",
+    "website": "https://kweet.vercel.app/",
+    "github": "https://github.com/aks2002aks/twitter"
+  },
+  {
+    "name": "SKILLOWEEN - A WEB GAME",
+    "image": "/img8.png",
+    "tech_stack": "Next js, Node js, Express js, MongoDB",
+    "website": "https://games-aks2002aks.vercel.app/",
+    "github": "https://github.com/aks2002aks/games"
+  },
+  {
+    "name": "PERSONAL CODE BLOG WEB APPLICATION",
+    "image": "/img9.png",
+    "tech_stack": "Next js, Node js, Express js, MongoDB",
+    "website": "http://blog.ashwanikumarsingh.in",
+    "github": "https://github.com/aks2002aks/ashwaniblog"
+  },
+  {
+    "name": "PORTFOLIO WEB APPLICATION",
+    "image": "/img10.png",
+    "tech_stack": "React js ,Tailwind css",
+    "website": "https://ashwani-blog-4ea7a.web.app/",
+    "github": "https://github.com/aks2002aks/portfolio"
+  },
+  {
+    "name": "STUDENT TRACKING SYSTEM",
+    "image": "/img11.jpg",
+    "tech_stack": "HTML , CSS , Javascript , MySQL ,Express js",
+    "website": "",
+    "github": "https://github.com/aks2002aks/STUDENT-TRACKING-SYSTEM"
+  }
+]
