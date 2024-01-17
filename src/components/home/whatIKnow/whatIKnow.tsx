@@ -9,7 +9,11 @@ import Devops from "./components/devops";
 import Languages from "./components/languages";
 import Others from "./components/others";
 
-const WhatIKnow = () => {
+interface Props {
+  whatIKnowRef: React.RefObject<HTMLDivElement>;
+}
+
+const WhatIKnow: React.FC<Props> = ({ whatIKnowRef }) => {
   const [frontendOpen, setFrontendOpen] = useState(false);
   const [backendOpen, setBackendOpen] = useState(false);
   const [databaseOpen, setDatabaseOpen] = useState(false);
@@ -69,7 +73,7 @@ const WhatIKnow = () => {
   }, []);
 
   return (
-    <div className="pt-24 md:pt-32 p-5 md:p-10">
+    <div className="pt-24 md:pt-32 p-5 md:p-10" ref={whatIKnowRef}>
       <div className="space-y-10 flex flex-col items-center justify-center">
         <span className="text-xl md:text-3xl font-bold ">
           <span className="text-orange-500">{"</>"}</span> What I Know

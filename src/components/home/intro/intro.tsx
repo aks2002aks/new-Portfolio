@@ -3,11 +3,17 @@
 import React, { useRef } from "react";
 import MyImage from "./components/myImage";
 import Name from "./components/name";
-import Image from "next/image";
 
-const Intro = () => {
+interface Props {
+  introRef: React.RefObject<HTMLDivElement>;
+}
+
+const Intro: React.FC<Props> = ({ introRef }) => {
   return (
-    <div className="relative flex h-screen justify-center items-center">
+    <div
+      className="relative flex h-screen justify-center items-center"
+      ref={introRef}
+    >
       <video
         src="/bg_vid.mp4"
         autoPlay

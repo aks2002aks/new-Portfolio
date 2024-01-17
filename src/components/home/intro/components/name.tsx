@@ -13,7 +13,7 @@ const Name = () => {
       await controls.start({
         scaleX: 1,
         opacity: 1,
-        transition: { duration: 0.5 },
+        transition: { duration: 1 },
       });
     };
 
@@ -29,14 +29,16 @@ const Name = () => {
         <div key={lineIndex} style={{ display: "flex" }}>
           <>
             {line.split(" ").map((word, charIndex) => (
-              <span key={charIndex}>
+              <React.Fragment key={charIndex}>
                 {word.split("").map((char, i) => (
                   <motion.span
                     key={i}
                     custom={charIndex + 1} // Custom prop to stagger the animation
                     initial={{ scaleX: -1, opacity: 0 }}
                     animate={controls}
-                    transition={{ delay: 0.03 * charIndex + 1 }} // Adjust the delay to achieve the desired typing effect
+                    transition={{
+                      delay: 0.03 * i + 0.5 * charIndex + 2.5 * lineIndex ,
+                    }} // Adjust the delay to achieve the desired typing effect
                   >
                     {(word === "Ashwani" && char === "A") ||
                     (word === "Kumar" && char === "K") ||
@@ -52,7 +54,7 @@ const Name = () => {
                 {charIndex !== line.split(" ").length - 1 && (
                   <span>{"\u00A0"}</span>
                 )}
-              </span>
+              </React.Fragment>
             ))}
 
             {lineIndex !== lines.length - 1 && (

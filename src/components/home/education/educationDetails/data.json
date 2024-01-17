@@ -1,0 +1,20 @@
+[
+  {
+    "school_name": "College",
+    "time": "Sep 2020 - Present",
+    "Location": "KIIT UNIVERSITY, Bhubaneswar, Odisha, India",
+    "score": "CGPA: 9.07"
+  },
+  {
+    "school_name": "12th",
+    "time": "May 2018 - April 2020",
+    "Location": "DPS, Varanasi, Uttar Pradesh, India",
+    "score": "Percentage: 89%"
+  },
+  {
+    "school_name": "10th",
+    "time": "April 2006 - March 2020",
+    "Location": "St. John's School B.L.W, Varanasi, Uttar Pradesh, India",
+    "score": "Percentage: 75%"
+  }
+]

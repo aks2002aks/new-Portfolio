@@ -3,18 +3,18 @@ import Image from "next/image";
 import Timeline from "./components/timeline";
 
 interface Props {
-  experienceRef: React.RefObject<HTMLDivElement>;
+  educationRef: React.RefObject<HTMLDivElement>;
 }
 
-const Experience: React.FC<Props> = ({ experienceRef }) => {
+const Education: React.FC<Props> = ({ educationRef }) => {
   return (
-    <div className="pt-24 md:pt-32 p-5 md:p-10" ref={experienceRef}>
+    <div className="pt-24 md:pt-32 p-5 md:p-10" ref={educationRef}>
       <div className="space-y-10 flex flex-col items-center justify-center">
         <span className="text-xl md:text-3xl font-bold ">
-          <span className="text-orange-500">{"</>"}</span> Experience
+          <span className="text-orange-500">{"</>"}</span> Education
         </span>
         <Image
-          src="/experience.svg"
+          src="/education.svg"
           alt="What I Know"
           height={400}
           width={400}
@@ -27,4 +27,4 @@ const Experience: React.FC<Props> = ({ experienceRef }) => {
   );
 };
 
-export default Experience;
+export default Education;

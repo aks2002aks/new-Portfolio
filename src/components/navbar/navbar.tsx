@@ -1,13 +1,15 @@
 "use client";
 
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const Navbar = () => {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuVariants = {
     open: {
@@ -31,8 +33,12 @@ export const Navbar = () => {
       <div className="md:max-w-3xl w-full lg:max-w-5xl sm:max-w-xl max-w-xs  px-2  lg:px-7 bg-[#434343]  mt-3 bg-opacity-80 rounded-full ">
         <div className="relative flex flex-wrap items-center justify-between py-3 md:py-4 ">
           <div className="w-full px-6 flex justify-between lg:w-max ">
-            <Link
-              href={"/"}
+            <li
+              onClick={() => {
+                router.replace("/", {
+                  scroll: true,
+                });
+              }}
               aria-label="logo"
               className="flex space-x-2 items-center"
             >
@@ -42,7 +48,7 @@ export const Navbar = () => {
               >
                 A K S
               </span>
-            </Link>
+            </li>
             <div className="-mr-2 lg:hidden text-white flex justify-center items-center">
               <button
                 aria-label="humburger"
@@ -53,13 +59,51 @@ export const Navbar = () => {
               </button>
             </div>
           </div>
-          <div className="hidden lg:flex w-full flex-wrap justify-end items-center space-y-6 p-6 rounded-xl bg-white md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-7/12">
+          <div className=" hidden lg:flex w-full flex-wrap justify-end items-center space-y-6 p-6 rounded-xl bg-white md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-7/12">
             <div className=" text-gray-600 lg:pr-4">
               <ul className="flex justify-center items-center space-y-4  font-medium text-sm md:flex md:space-y-0 text-orange-500 ">
-                <li>
-                  <a className="block md:px-4 transition  cursor-pointer hover:text-orange-700">
-                    <span>What I Know</span>
-                  </a>
+                <li
+                  className="block md:px-4 transition  cursor-pointer hover:text-orange-700 text-nowrap"
+                  onClick={() => {
+                    router.replace("/?view=what_i_know", {
+                      scroll: true,
+                    });
+                  }}
+                >
+                  <span>What I Know</span>
+                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </li>
+                <li
+                  className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
+                  onClick={() => {
+                    router.replace("/?view=experience", {
+                      scroll: true,
+                    });
+                  }}
+                >
+                  <span>Experience</span>
+                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </li>
+                <li
+                  className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
+                  onClick={() => {
+                    router.replace("/?view=projects", {
+                      scroll: true,
+                    });
+                  }}
+                >
+                  <span>Projects</span>
+                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </li>
+                <li
+                  className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
+                  onClick={() => {
+                    router.replace("/?view=education", {
+                      scroll: true,
+                    });
+                  }}
+                >
+                  <span>Education</span>
                   <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                 </li>
                 <Link
@@ -91,7 +135,7 @@ export const Navbar = () => {
       </div>
       {isMenuOpen && (
         <motion.div
-          className="lg:hidden  md:max-w-3xl w-full lg:max-w-5xl sm:max-w-xl max-w-xs  px-2  lg:px-7 bg-[#3B3738]  mt-3 rounded-xl   md:rounded-full text-white"
+          className="lg:hidden  md:max-w-3xl w-full lg:max-w-5xl sm:max-w-xl max-w-xs  px-2  lg:px-7 bg-[#3B3738]  mt-3 rounded-xl   md:rounded-full text-orange-500"
           initial="closed"
           animate="open"
           variants={menuVariants}
@@ -99,43 +143,63 @@ export const Navbar = () => {
           <div className="relative flex  items-center justify-between py-3 gap-6 md:gap-0">
             <div className="w-full flex  justify-end items-center space-y-6 p-2  lg:rounded-full  md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-7/12">
               <div className="w-full flex flex-col md:flex-row md:p-2 justify-center items-center">
-                <ul className="flex flex-col space-y-2 md:flex-row md:flex-wrap  justify-center items-center ">
-                  <li>
-                    <a className="block md:px-4 transition hover:text-yellow-700 cursor-pointer">
-                      <span>Events</span>
-                    </a>
+                <ul className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:flex-wrap  justify-center items-center ">
+                  <li
+                    className="block md:px-4 transition  cursor-pointer hover:text-orange-700 text-nowrap"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.replace("/?view=what_i_know", {
+                        scroll: true,
+                      });
+                    }}
+                  >
+                    <span>What I Know</span>
+                    <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                  </li>
+                  <li
+                    className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.replace("/?view=experience", {
+                        scroll: true,
+                      });
+                    }}
+                  >
+                    <span>Experience</span>
+                    <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                  </li>
+                  <li
+                    className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.replace("/?view=projects", {
+                        scroll: true,
+                      });
+                    }}
+                  >
+                    <span>Projects</span>
+                    <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                  </li>
+                  <li
+                    className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.replace("/?view=education", {
+                        scroll: true,
+                      });
+                    }}
+                  >
+                    <span>Education</span>
+                    <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </li>
                   <Link
-                    href={"/menu"}
-                    className="block md:px-4 transition hover:text-yellow-700 cursor-pointer"
+                    href={"https://blog.ashwanikumarsingh.in/"}
+                    target="_blank"
+                    className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
                   >
-                    <span>Menu</span>
+                    <span>Blogs</span>
+                    <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                   </Link>
-                  <li>
-                    <a className="block md:px-4 transition hover:text-yellow-700 cursor-pointer">
-                      <span>Awards</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block md:px-4 transition hover:text-yellow-700 cursor-pointer">
-                      <span>Ambiance</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block md:px-4 transition hover:text-yellow-700 cursor-pointer">
-                      <span>Chef</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block md:px-4 transition hover:text-yellow-700 cursor-pointer">
-                      <span>Sustainability</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block md:px-4 transition hover:text-yellow-700 cursor-pointer">
-                      <span>Review</span>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>

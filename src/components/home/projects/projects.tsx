@@ -5,9 +5,13 @@ import Image from "next/image";
 import Card from "./components/card";
 import projectsData from "./projectsDetails/data.json";
 
-const Projects = () => {
+interface Props {
+  projectsRef: React.RefObject<HTMLDivElement>;
+}
+
+const Projects: React.FC<Props> = ({ projectsRef }) => {
   return (
-    <div className="pt-24 md:pt-32 p-5 md:p-10">
+    <div className="pt-24 md:pt-32 p-5 md:p-10" ref={projectsRef}>
       <div className="space-y-10 flex flex-col items-center justify-center">
         <span className="text-xl md:text-3xl font-bold ">
           <span className="text-orange-500">{"</>"}</span> Projects
