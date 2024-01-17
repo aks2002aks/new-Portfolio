@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Navbar = () => {
   const router = useRouter();
@@ -32,18 +33,19 @@ export const Navbar = () => {
     <nav className=" fixed z-50 w-full  top-0 flex flex-col justify-center items-center">
       <div className="md:max-w-3xl w-full lg:max-w-5xl sm:max-w-xl max-w-xs  px-2  lg:px-7 bg-[#434343]  mt-3 bg-opacity-80 rounded-full ">
         <div className="relative flex flex-wrap items-center justify-between py-3 md:py-4 ">
-          <div className="w-full px-6 flex justify-between lg:w-max ">
+          <div className="w-full px-2 flex justify-between lg:w-max ">
             <li
               onClick={() => {
                 router.replace("/", {
-                  scroll: true,
+                  scroll: false,
                 });
               }}
               aria-label="logo"
               className="flex space-x-2 items-center"
             >
+              <Image src={"/logo.png"} alt="logo" width={35} height={35} />
               <span
-                className="lg:text-4xl text-xl font-bold  cursor-pointer"
+                className="lg:text-4xl text-xl font-bold  cursor-pointer pl-2"
                 style={{ textShadow: "5px 2px rgb(249 115 22)" }}
               >
                 A K S
@@ -66,7 +68,7 @@ export const Navbar = () => {
                   className="block md:px-4 transition  cursor-pointer hover:text-orange-700 text-nowrap"
                   onClick={() => {
                     router.replace("/?view=what_i_know", {
-                      scroll: true,
+                      scroll: false,
                     });
                   }}
                 >
@@ -77,7 +79,7 @@ export const Navbar = () => {
                   className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
                   onClick={() => {
                     router.replace("/?view=experience", {
-                      scroll: true,
+                      scroll: false,
                     });
                   }}
                 >
@@ -88,7 +90,7 @@ export const Navbar = () => {
                   className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
                   onClick={() => {
                     router.replace("/?view=projects", {
-                      scroll: true,
+                      scroll: false,
                     });
                   }}
                 >
@@ -99,7 +101,7 @@ export const Navbar = () => {
                   className="block md:px-4 transition  cursor-pointer hover:text-orange-700"
                   onClick={() => {
                     router.replace("/?view=education", {
-                      scroll: true,
+                      scroll: false,
                     });
                   }}
                 >
@@ -118,14 +120,16 @@ export const Navbar = () => {
             </div>
             <div className="flex space-x-4 w-full space-y-2 border-yellow-200 lg:space-y-0 md:w-max lg:border-l pl-7">
               <Link
-                href={"/"}
-                className="hover:text-yellow-700 dark:hover:text-yellow-500"
+                href={"https://www.linkedin.com/in/ashwani-kumar-singh/"}
+                target="_blank"
+                className="hover:text-yellow-700 dark:hover:text-orange-500"
               >
                 <FaLinkedin size={20} />
               </Link>
               <Link
                 href={"https://www.instagram.com/ashwani_a.k.s"}
-                className="hover:text-yellow-700 dark:hover:text-yellow-500"
+                target="_blank"
+                className="hover:text-yellow-700 dark:hover:text-orange-500"
               >
                 <FaInstagram size={20} />
               </Link>
@@ -149,7 +153,7 @@ export const Navbar = () => {
                     onClick={() => {
                       setIsMenuOpen(false);
                       router.replace("/?view=what_i_know", {
-                        scroll: true,
+                        scroll: false,
                       });
                     }}
                   >
@@ -161,7 +165,7 @@ export const Navbar = () => {
                     onClick={() => {
                       setIsMenuOpen(false);
                       router.replace("/?view=experience", {
-                        scroll: true,
+                        scroll: false,
                       });
                     }}
                   >
@@ -173,7 +177,7 @@ export const Navbar = () => {
                     onClick={() => {
                       setIsMenuOpen(false);
                       router.replace("/?view=projects", {
-                        scroll: true,
+                        scroll: false,
                       });
                     }}
                   >
@@ -185,7 +189,7 @@ export const Navbar = () => {
                     onClick={() => {
                       setIsMenuOpen(false);
                       router.replace("/?view=education", {
-                        scroll: true,
+                        scroll: false,
                       });
                     }}
                   >

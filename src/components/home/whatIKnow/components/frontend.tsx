@@ -65,6 +65,9 @@ const Frontend: React.FC<Props> = ({
             <span className="bg-[#1b1b1b] mr-2 mb-2 p-2 rounded-md text-nowrap opacity-60 border-green-500 border">
               Next Js 14
             </span>
+            <span className="bg-[#1b1b1b] mr-2 mb-2 p-2 rounded-md text-nowrap opacity-60 border-yellow-500 border">
+              Redux
+            </span>
           </div>
         )}
       </div>

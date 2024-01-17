@@ -17,7 +17,6 @@ export default function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log(searchParams.get("view"));
     const view = searchParams.get("view")?.replaceAll('"', "");
     if (view === "what_i_know") {
       whatIKnowRef.current?.scrollIntoView({ behavior: "smooth" });
