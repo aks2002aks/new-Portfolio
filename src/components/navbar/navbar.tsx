@@ -122,14 +122,14 @@ export const Navbar = () => {
               <Link
                 href={"https://www.linkedin.com/in/ashwani-kumar-singh/"}
                 target="_blank"
-                className="hover:text-yellow-700 dark:hover:text-orange-500"
+                className=" hover:text-orange-500"
               >
                 <FaLinkedin size={20} />
               </Link>
               <Link
                 href={"https://www.instagram.com/ashwani_a.k.s"}
                 target="_blank"
-                className="hover:text-yellow-700 dark:hover:text-orange-500"
+                className=" hover:text-orange-500"
               >
                 <FaInstagram size={20} />
               </Link>
