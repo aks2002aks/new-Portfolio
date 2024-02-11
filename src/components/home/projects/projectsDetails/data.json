@@ -1,5 +1,33 @@
 [
   {
+    "name": "Smart Home",
+    "image": "/img1.png",
+    "tech_stack": "React js,Tailwind css",
+    "website": "https://smart-home-eta.vercel.app/",
+    "github": "https://github.com/aks2002aks/smart_home"
+  },
+  {
+    "name": "Smart Home Backend",
+    "image": "/img1.png",
+    "tech_stack": "Node js, Express js, MongoDB ",
+    "website": "",
+    "github": "https://github.com/aks2002aks/smart_home_backend"
+  },
+  {
+    "name": "Task Manager",
+    "image": "/img1.png",
+    "tech_stack": "React js, Tailwind css",
+    "website": "",
+    "github": "https://github.com/aks2002aks/task_app"
+  },
+  {
+    "name": "Task Manager Backend",
+    "image": "/img1.png",
+    "tech_stack": "Node js, Express js, MongoDB",
+    "website": "",
+    "github": "https://github.com/aks2002aks/task_app_backend"
+  },
+  {
     "name": "RESTAURANT WEB APP",
     "image": "/img1.png",
     "tech_stack": "Next js, Node js, Express js, MongoDB ,Tailwind css",
