@@ -20,7 +20,7 @@ const Name = () => {
     animateText();
   }, [controls]);
 
-  const text = "Hi,I'm Ashwani Kumar Singh,Full Stack Web Developer";
+  const text = "Hi,I'm Ashwani Kumar Singh,Developer";
 
   const lines = text.split(",");
   return (
